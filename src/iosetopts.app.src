@@ -6,7 +6,13 @@
    [kernel,
     stdlib
    ]},
-  {env,[]},
+  {env,[
+   {iosetopts,
+    [{opts,
+     [{encoding, unicode}]
+    }]
+   }
+  ]},
   {modules, []},
   {mod, {iosetopts, []}},
   {licenses, ["Apache 2.0"]},

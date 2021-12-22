@@ -1,5 +1,3 @@
-%%    Copyright 2021 Empayre
-%%
 %%   Licensed under the Apache License, Version 2.0 (the "License");
 %%   you may not use this file except in compliance with the License.
 %%   You may obtain a copy of the License at
@@ -19,9 +17,12 @@
 -export([start/2]).
 -export([stop/1]).
 
+-spec start(application:start_type(), term()) -> {ok, pid()}.
 start(_StartType, _StartArgs) ->
   Opts = application:get_env(?MODULE, opts, []),
-  io:setopts(Opts).
+  ok = io:setopts(Opts),
+  genlib_adhoc_supervisor:start_link(#{}, []).
 
+-spec stop(term()) -> ok.
 stop(_State) ->
   ok.
