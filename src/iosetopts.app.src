@@ -8,10 +8,8 @@
     genlib
    ]},
   {env,[
-   {iosetopts,
-    [{opts,
-     [{encoding, unicode}]
-    }]
+   {opts,
+    [{encoding, unicode}]
    }
   ]},
   {modules, []},
