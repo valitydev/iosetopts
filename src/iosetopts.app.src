@@ -1,0 +1,18 @@
+{application, iosetopts,
+ [{description, "Microlib to use io:setopts on startup"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib,
+    genlib
+   ]},
+  {env,[
+   {opts,
+    [{encoding, unicode}]
+   }
+  ]},
+  {modules, []},
+  {mod, {iosetopts, []}},
+  {licenses, ["Apache 2.0"]}
+ ]}.
